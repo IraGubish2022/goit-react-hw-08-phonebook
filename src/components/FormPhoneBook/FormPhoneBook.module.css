@@ -1,0 +1,42 @@
+.form {
+  position: relative;
+  padding: 15px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.formLabel {
+  display: block;
+  text-align: start;
+  margin-bottom: 10px;
+  height: 32px;
+  font-style: italic;
+  font-weight: 500;
+}
+
+.inputForm {
+  position: absolute;
+  width: 240px;
+  left: 80px;
+  border: none;
+  outline-color: rgb(5, 136, 5);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.btnForm {
+  padding: 8px;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 2, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 2, 0.14), 0px 2px 1px -1px rgba(0, 0, 2, 0.12);
+  background-color: rgb(12, 219, 32);
+  border-radius: 5px;
+  border: solid;
+  font-size: 20px;
+  font-weight: 500;
+  font-style: italic;
+  cursor: pointer;
+}
+
+.btnForm:hover {
+  background-color: pink;
+}

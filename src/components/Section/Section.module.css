@@ -1,0 +1,19 @@
+.section {
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5px;
+  padding: 15px;
+  background-color: rgb(249, 135, 59);
+  border-radius: 15px;
+  border: solid black;
+}
+
+.sectionTitle {
+  font-size: 35px;
+  font-weight: 500;
+  font-style: italic;
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-align: center;
+}

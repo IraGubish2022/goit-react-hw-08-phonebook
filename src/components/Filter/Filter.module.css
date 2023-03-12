@@ -1,0 +1,19 @@
+.labelFilter {
+  position: relative;
+  display: block;
+  margin-bottom: 10px;
+  height: 24px;
+  font-size: 15px;
+  font-style: italic;
+  font-weight: 500;
+  text-align: start;
+}
+
+.inputFilter {
+  position: absolute;
+  left: 165px;
+  width: 220px;
+  border: 1px solid transparent;
+  outline-color: rgb(11, 177, 11);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.2);
+}

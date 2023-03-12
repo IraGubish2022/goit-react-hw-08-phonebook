@@ -1,0 +1,24 @@
+.contactsItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 500;
+  font-style: italic;
+}
+.contactsBtn {
+  padding: 8px;
+  height: 34px;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 2, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 2, 0.14), 0px 2px 1px -1px rgba(0, 0, 2, 0.12);
+  background-color: rgb(12, 219, 32);
+  border-radius: 5px;
+  border: solid;
+  font-size: 16px;
+  font-weight: 500;
+  font-style: italic;
+  cursor: pointer;
+}
+.contactsBtn:hover {
+  background-color: pink;
+}
