@@ -22,7 +22,7 @@ const ContactsPage = lazy(() => import('../pages/Contacts/Contacts'));
 
 const App = () => {
   const dispatch = useDispatch();
-  const isRefreshing = useAuth();
+  const {isRefreshing} = useAuth();
   // const isLoading = useSelector(selectIsLoading);
   // const error = useSelector(selectError);
 

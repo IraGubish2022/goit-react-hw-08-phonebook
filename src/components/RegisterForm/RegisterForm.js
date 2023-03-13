@@ -33,7 +33,7 @@ export const RegisterForm = () => {
         <input type="password" name="password" />
       </label>
       <button className={css.button} type="submit">
-        Register
+        Register ➞
       </button>
     </form>
   );

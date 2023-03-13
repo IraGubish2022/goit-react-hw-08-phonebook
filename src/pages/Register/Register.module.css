@@ -1,8 +1,8 @@
 .title {
     font-weight: 1100;
     font-family: cursive;
-    font-size: 78px;
+    font-size: 50px;
     text-align: center;
-    text-shadow: #055479 50px 50px 8px;
+    /* text-shadow: #055479 50px 50px 8px; */
     color: #7d0ec5;
   }

@@ -1,8 +1,8 @@
 //import { ActionTypes } from '@mui/base';
 import { createSlice } from '@reduxjs/toolkit';
-import { register, logIn, logOut, refreshUser } from './authOperations';
+//import { register, logIn, logOut, refreshUser } from './authOperations';
 
-const actions = [register, logIn, logOut, refreshUser];
+//const actions = [register, logIn, logOut, refreshUser];
 
 const initialState = {
   user: { name: null, email: null },
@@ -16,27 +16,40 @@ const authSlice = createSlice({
   name: 'auth',
   initialState,
 
-  extraReducers: {
-    [actions.register.fulfilled](state, action) {
+  reducers: {
+    setCredentials: (state, action) => {
       state.user = action.payload.user;
-      state.token = action.payload.token;
+      state.token = action.payload.token
       state.isLoggedIn = true;
     },
-    [actions.logIn.fulfilled](state, action) {
-      state.user = action.payload.user;
-      state.token = action.payload.token;
-      state.isLoggedIn = true;
-    },
-    [actions.logOut.fulfilled](state, action) {
+    unsetCredentials: (state, _) => {
       state.user = { name: null, email: null };
       state.token = null;
       state.isLoggedIn = false;
     },
-    [actions.refreshUser.fulfilled](state, action) {
-      state.user = action.payload;
-      state.isLoggedIn = true;
-    },
   },
+
+  // extraReducers: {
+  //   [actions.register.fulfilled](state, action) {
+  //     state.user = action.payload.user;
+  //     state.token = action.payload.token;
+  //     state.isLoggedIn = true;
+  //   },
+  //   [actions.logIn.fulfilled](state, action) {
+  //     state.user = action.payload.user;
+  //     state.token = action.payload.token;
+  //     state.isLoggedIn = true;
+  //   },
+  //   [actions.logOut.fulfilled](state, action) {
+  //     state.user = { name: null, email: null };
+  //     state.token = null;
+  //     state.isLoggedIn = false;
+  //   },
+  //   [actions.refreshUser.fulfilled](state, action) {
+  //     state.user = action.payload;
+  //     state.isLoggedIn = true;
+  //   },
+  // },
 
   // extraReducers: (builder) => {
   //   builder
@@ -123,5 +136,5 @@ const authSlice = createSlice({
   //   },
   // },
 });
-
+export const { setCredentials, unsetCredentials } = authSlice.actions;
 export const authReducer = authSlice.reducer;
