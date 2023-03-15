@@ -4,13 +4,16 @@
   margin-bottom: 10px;
   height: 24px;
   font-size: 15px;
-  font-style: italic;
-  font-weight: 500;
+  font-weight: 700;
+  color: #7d0ec5;
+  font-family: cursive;
   text-align: start;
 }
 
 .inputFilter {
   position: absolute;
+  color: #7d0ec5;
+  font-family: cursive;
   left: 165px;
   width: 220px;
   border: 1px solid transparent;
