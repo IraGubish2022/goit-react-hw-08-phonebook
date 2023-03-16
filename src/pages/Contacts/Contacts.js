@@ -8,6 +8,7 @@ import { fetchContacts } from 'redux/operations';
 import ContactList from 'components/Contacts/ContactsList';
 import Filter from 'components/Filter/Filter';
 import FormPhoneBook from 'components/FormPhoneBook/FormPhoneBook';
+import css from './Contacts.module.css';
 
 const Contacts = () => {
   const dispatch = useDispatch();
@@ -21,7 +22,7 @@ const Contacts = () => {
   return (
     <div>
       {/* <Helmet> */}
-      <h1>Your contacts</h1>
+      <h1 className={css.title}>Your contacts</h1>
       {/* </Helmet> */}
       <div>
         <FormPhoneBook />

@@ -11,5 +11,5 @@ export const AuthNav = () => {
         Log In
       </NavLink>
     </div>
-    )
-}
+    );
+};
