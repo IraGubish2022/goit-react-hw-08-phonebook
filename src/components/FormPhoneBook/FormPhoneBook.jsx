@@ -9,7 +9,7 @@ import { addContact } from 'redux/operations';
 
 const FormPhoneBook = () => {
   const [name, setName] = useState('');
-  const [phone, setPhone] = useState('');
+  const [number, setNumber] = useState('');
   const NameInputFormId = uuidv4();
   const NumberInputFormId = uuidv4();
   const contacts = useSelector(selectContact);
@@ -22,8 +22,8 @@ const FormPhoneBook = () => {
         setName(value);
         break;
 
-      case 'phone':
-        setPhone(value);
+      case 'number':
+        setNumber(value);
         break;
 
       default:
@@ -37,13 +37,13 @@ const FormPhoneBook = () => {
     if (contacts.find(contact => contact.name === name)) {
       Notify.failure(`${name} is already in contacts.`);
       return;
-    } else if (contacts.find(contact => contact.phone === phone)) {
-      Notify.failure(`${phone} is already in contacts.`);
+    } else if (contacts.find(contact => contact.number === number)) {
+      Notify.failure(`${number} is already in contacts.`);
       return false;
     }
-    dispatch(addContact({name, phone}));
+    dispatch(addContact({name, number}));
     setName('');
-    setPhone('');
+    setNumber('');
   };
 
   return (
@@ -69,8 +69,8 @@ const FormPhoneBook = () => {
           className={Style.inputForm}
           type="tel"
           placeholder="Enter number"
-          name="phone"
-          value={phone}
+          name="number"
+          value={number}
           onChange={handleChange}
         />
       </label>

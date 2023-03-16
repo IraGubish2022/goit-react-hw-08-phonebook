@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 import { deleteContact } from 'redux/operations';
 import { useDispatch } from 'react-redux';
 
-const ContactItem = ({ id, name, phone }) => {
+const ContactItem = ({ id, name, number }) => {
   const dispatch = useDispatch();
   return (
     <li className={Style.contactsItem}>
       <p className={Style.contactsText}>
-        {name}: <span>{phone}</span>
+        {name}: <span>{number}</span>
       </p>
 
       <button
